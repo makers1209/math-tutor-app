@@ -31,7 +31,14 @@
         </div>
       </mat-card-content>
       <mat-card-actions fxFlex="none" style="padding-left: 16px; padding-right: 16px;">
-        <button mat-raised-button color="primary" (click)="checkAnswer()">Answer</button>
+        <div matTooltip="Please provide an answer." [matTooltipDisabled]="answer !== null">
+          <button mat-raised-button 
+                  color="primary" 
+                  (click)="checkAnswer()" 
+                  [disabled]="answer == null">
+            Answer
+          </button>
+        </div>
       </mat-card-actions>
     </mat-card>  
   </div>

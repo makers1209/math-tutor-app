@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const routes: Routes = [
     {
@@ -37,7 +38,8 @@ const routes: Routes = [
         MatButtonModule,
         FlexLayoutModule,
         MatInputModule,
-        FormsModule
+        FormsModule,
+        MatTooltipModule
     ],
     providers: [
         CalculatorService,

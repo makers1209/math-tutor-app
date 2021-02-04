@@ -20,6 +20,7 @@ export class AppComponent {
     constructor(private calculatorService: CalculatorService,
                 private messageService: MessageService) {
         this.generateXandY();
+        this.answer = null;
     }
 
     checkAnswer(): void {
