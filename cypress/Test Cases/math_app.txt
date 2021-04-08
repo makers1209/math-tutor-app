@@ -1,0 +1,24 @@
+Scenario: Given the Math Tutor App page loads in browser.
+     When the page loads, 
+        1. then the page title should be 'MathTutorApp'.
+        2. then the card title should be 'Math Challenge'.
+        3. then the card subtitle should be 'Addition'.
+        4. then two random numbers should be vertically alligned with a + symbol to the left of the lower number.
+        5. then an input field should be beneath the numbers with the name 'Answer" visible. 
+        6. the 'Answer' field should be clickable, and only accept integers.
+        7. then a button with the name 'Answer' should be at the bottom left of the card, greyed out and not clickable.
+        8. and a tooltip should appear stating 'Please provide an answer' when the 'Answer' button is hovered over.
+        8. then the 'Answer' button should change to blue, and become clickable when a valid integer is entered in the 'Answer' field.
+        9. then new random numbers should be displyed everytime the page is loaded.
+        
+Scenario: Given a user enters the correct answer and clicks the Answer button.
+    When a correct answer is entered, and the 'Answer' button is clicked,
+        1. then a green banner with a white checkmark appears in the top right corner stating 'That's right! Try another one'.
+        2. the banner disappears and the page reloads with new random numbers. 
+
+Scenario: Given a user enters an incorrect answer and clicks the Answer button.
+    When an incorrect answer is entered, and the 'Answer' button is clicked,
+        1. then a red banner with a white X appears in the top right corner stating 'Sorry, that is not correct. Please try again'.
+        2. the page does not reload, the answer is not cleared out, and the user may attempt a new answer.
+        3. the user can enter a number that is negative, or larger than 256 characters with no errors. 
+
