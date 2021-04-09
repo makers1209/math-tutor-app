@@ -27,6 +27,7 @@ describe('math app test by marc', () => {
         cy.contains('Sorry, that is not correct. Please try again.').should('be.visible')
     })
     it('verify the correct answer prompts the correct answer message', () => {
+        //verify the happy path works. I'm unfamiliar with javascript functions in cypress, so I added a pause to manually do the addition just to see the passing message. This is a good example of when I would reach out to pair with another engineer.
         cy.get('[data-cy=xValue]').should('be.visible')
         cy.get('[data-cy=yValue]').should('be.visible')
         cy.pause()
